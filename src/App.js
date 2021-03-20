@@ -1,6 +1,11 @@
+
+import FeaturedCard from './Components/Card/FeaturedCard.js';
+
 function App() {
   return (
-    <h1>Hello App</h1>
+    <div className="App">
+      <FeaturedCard/>
+    </div>
   );
 }
 

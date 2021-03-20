@@ -1,4 +1,4 @@
-
+import './App.css'
 import FeaturedCard from './Components/Card/FeaturedCard.js';
 
 function App() {

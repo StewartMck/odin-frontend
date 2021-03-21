@@ -5,14 +5,12 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 
 import Avatars from './Avatars';
 import Sponsor from './Sponsor';
 import FosterAdoptSponsorForm from './FosterAdoptSponsorForm';
 
 import Data from './CardData';
-
 
 const useStyles = makeStyles({
     root: {
@@ -22,7 +20,6 @@ const useStyles = makeStyles({
         height: "15em",
     },
 });
-
 
 export default function FeaturedCard() {
     const classes = useStyles();
@@ -58,9 +55,6 @@ export default function FeaturedCard() {
                 name={Data.Name}
                 buttonDisabled = {Data.SponsorName ? true : false}
                 />        
-                {/* <Button variant="contained" color="primary" href="#contained-buttons">
-                    Foster
-                </Button> */}
             </CardActions>
         </Card>
     );

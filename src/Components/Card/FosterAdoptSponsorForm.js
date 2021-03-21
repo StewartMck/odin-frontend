@@ -27,7 +27,7 @@ export default function FosterAdoptForm(props) {
     return (
         <>
             <Button
-                variant="contained" color="primary" href="#contained-buttons" size="medium"
+                variant="contained" color="primary" size="medium"
                 disabled={props.buttonDisabled && props.title === 'Sponsor'}
                 onClick={handleClickOpen}>
                 {props.title}

@@ -1,0 +1,14 @@
+.avatar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cardActions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.petDetails {
+    color:grey;
+}

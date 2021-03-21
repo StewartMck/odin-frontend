@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 
 import Avatars from './Avatars';
 import Sponsor from './Sponsor';
+import FosterAdoptSponsorForm from './FosterAdoptSponsorForm';
 
 import Data from './CardData';
 
@@ -43,14 +44,23 @@ export default function FeaturedCard() {
                 </CardContent>
             </CardActionArea>
             <CardActions className="cardActions">
-                <Button variant="contained" color="primary" href="#contained-buttons" size="large">
-                    Adopt
-                </Button><Button variant="contained" color="primary" href="#contained-buttons">
-                    Sponsor
-                </Button>
-                <Button variant="contained" color="primary" href="#contained-buttons">
+                <FosterAdoptSponsorForm
+                title="Adopt"
+                name={Data.Name}
+                />
+                <FosterAdoptSponsorForm
+                title="Sponsor"
+                name={Data.Name}
+                buttonDisabled = {Data.SponsorName ? true : false}
+                />
+                 <FosterAdoptSponsorForm
+                title="Foster"
+                name={Data.Name}
+                buttonDisabled = {Data.SponsorName ? true : false}
+                />        
+                {/* <Button variant="contained" color="primary" href="#contained-buttons">
                     Foster
-                </Button>
+                </Button> */}
             </CardActions>
         </Card>
     );

@@ -2,6 +2,7 @@
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 1em;
 }
 
 .cardActions {
@@ -12,3 +13,31 @@
 .petDetails {
     color:grey;
 }
+
+.text-divider {
+    display: flex;
+    align-items: center;
+    --text-divider-gap: 1rem;
+  }
+  
+  .text-divider::before,
+  .text-divider::after {
+    content: '';
+    height: 1px;
+    background-color: silver;
+    flex-grow: 1;
+  }
+  
+  .text-divider::before {
+    margin-right: var(--text-divider-gap);
+  }
+  
+  .text-divider::after {
+    margin-left: var(--text-divider-gap);
+  }
+
+ .text-divider-end {
+    background-color: silver;
+    flex-grow: 1;
+    margin: 0;
+ }

@@ -1,3 +1,4 @@
+import React from 'react';
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
 import Data from './CardData';
@@ -14,6 +15,8 @@ export default function Sponsor(props) {
 
     if (Data.SponsorImage) {
         return (
+            <>
+            <div class="text-divider">Sponsored By</div>
             <a href={Data.SponsorUrl} target="_blank">
                 <CardMedia
                     className={classes.image}
@@ -21,6 +24,8 @@ export default function Sponsor(props) {
                     title={Data.SponsorName}
                 />
             </a>
+            <hr class="text-divider-end"/>
+            </>
         )
     } else {
         return (

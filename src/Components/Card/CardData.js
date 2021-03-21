@@ -2,6 +2,8 @@ const data = {
     Name: "Lucky",
     Age: 10,
     Breed: 'Pug',
+    Notes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus fringilla quam, in sagittis nibh vehicula eget. Fusce non ante ac purus sodales aliquet vel vel turpis. Quisque ultricies eleifend ipsum, quis cursus nulla maximus quis. Morbi sollicitudin facilisis libero, ullamcorper pretium magna mattis vel. Ut et tellus ac justo sagittis sodales quis sed nisl. Nulla imperdiet ornare sapien eget viverra. Curabitur accumsan a ipsum a faucibus. Nunc lobortis tincidunt neque.',
+    BreedInfo: '',
     Sponsor: "Toyota",
     DogFriendly: true,
     CatFriendly: true,

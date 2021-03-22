@@ -29,10 +29,13 @@ export default function Sponsor(props) {
         )
     } else {
         return (
+            <>
+            <div class="text-divider">Sponsored By</div>
             <a href={Data.SponsorUrl || null} target="_blank">
-                <h1 className="sponsorTitle">{Data.SponsorName}</h1>
+                <h1 className="sponsorTitle">{Data.SponsorName || `Please sponsor me`}</h1>
             </a>
-
+             <hr class="text-divider-end"/>
+            </>
         )
     }
 };

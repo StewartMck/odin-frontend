@@ -15,7 +15,7 @@ import Data from './CardData';
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
-    },
+  },
     image: {
         height: "15em",
     },

@@ -37,7 +37,9 @@ export default function FeaturedCard() {
                     <h3 className="petDetails">Breed: {Data.Breed}</h3>
                     <h3 className="petDetails">Age: {Data.Age}</h3>
                     <Sponsor />
-                    <Avatars />
+                    <Avatars
+                    data={Data}
+                    />
                 </CardContent>
             </CardActionArea>
             <CardActions className="cardActions">

@@ -24,7 +24,8 @@ export default function NavMenu() {
             <Menu
                 id="navMenu"
                 anchorEl={anchorEl}
-                keepMounted
+                // keepMounted
+                transitionDuration={500}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >

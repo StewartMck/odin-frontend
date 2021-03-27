@@ -13,15 +13,15 @@ const useStyles = makeStyles({
 export default function Sponsor(props) {
     const classes = useStyles();
 
-    if (Data.SponsorImage) {
+    if (props.sponsor.SponsorImage) {
         return (
             <>
             <div class="text-divider">Sponsored By</div>
-            <a href={Data.SponsorUrl} target="_blank">
+            <a href={props.sponsor.SponsorUrl} target="_blank">
                 <CardMedia
                     className={classes.image}
-                    image={Data.SponsorImage}
-                    title={Data.SponsorName}
+                    image={props.sponsor.SponsorImage}
+                    title={props.sponsor.SponsorName}
                 />
             </a>
             <hr class="text-divider-end"/>
@@ -31,8 +31,8 @@ export default function Sponsor(props) {
         return (
             <>
             <div class="text-divider">Sponsored By</div>
-            <a href={Data.SponsorUrl || null} target="_blank">
-                <h1 className="sponsorTitle">{Data.SponsorName || `Please sponsor me`}</h1>
+            <a href={props.sponsor.SponsorUrl || null} target="_blank">
+                <h1 className="sponsorTitle">{props.sponsor.SponsorName || `Please sponsor me`}</h1>
             </a>
              <hr class="text-divider-end"/>
             </>

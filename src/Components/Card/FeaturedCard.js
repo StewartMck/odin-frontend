@@ -38,7 +38,9 @@ export default function FeaturedCard() {
                             <h1 className="petName">{animal.Name}</h1>
                             <h3 className="petDetails">Breed: {animal.Breed}</h3>
                             <h3 className="petDetails">Age: {animal.Age}</h3>
-                            <Sponsor />
+                            <Sponsor
+                            sponsor={animal}
+                            />
                             <Avatars
                                 data={animal}
                             />

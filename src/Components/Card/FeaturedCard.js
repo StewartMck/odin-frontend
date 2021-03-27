@@ -10,12 +10,12 @@ import Avatars from './Avatars';
 import Sponsor from './Sponsor';
 import FosterAdoptSponsorForm from './FosterAdoptSponsorForm';
 
-import Data from './CardData';
+import data from './CardData';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
-  },
+        // maxWidth: 345,
+    },
     image: {
         height: "15em",
     },
@@ -25,39 +25,44 @@ export default function FeaturedCard() {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.image}
-                    image={Data.Image}
-                    title={Data.Name}
-                />
-                <CardContent>
-                    <h1 className="petName">{Data.Name}</h1>
-                    <h3 className="petDetails">Breed: {Data.Breed}</h3>
-                    <h3 className="petDetails">Age: {Data.Age}</h3>
-                    <Sponsor />
-                    <Avatars
-                    data={Data}
-                    />
-                </CardContent>
-            </CardActionArea>
-            <CardActions className="cardActions">
-                <FosterAdoptSponsorForm
-                title="Adopt"
-                name={Data.Name}
-                />
-                <FosterAdoptSponsorForm
-                title="Sponsor"
-                name={Data.Name}
-                buttonDisabled = {Data.SponsorName ? true : false}
-                />
-                 <FosterAdoptSponsorForm
-                title="Foster"
-                name={Data.Name}
-                buttonDisabled = {Data.SponsorName ? true : false}
-                />        
-            </CardActions>
-        </Card>
+        <div className="Cards">
+            {data.map((animal) => {
+                return (<Card className={classes.root}>
+                    <CardActionArea>
+                        <CardMedia
+                            className={classes.image}
+                            image={animal.Image}
+                            title={animal.Name}
+                        />
+                        <CardContent>
+                            <h1 className="petName">{animal.Name}</h1>
+                            <h3 className="petDetails">Breed: {animal.Breed}</h3>
+                            <h3 className="petDetails">Age: {animal.Age}</h3>
+                            <Sponsor />
+                            <Avatars
+                                data={animal}
+                            />
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions className="cardActions">
+                        <FosterAdoptSponsorForm
+                            title="Adopt"
+                            name={animal.Name}
+                        />
+                        <FosterAdoptSponsorForm
+                            title="Sponsor"
+                            name={animal.Name}
+                            buttonDisabled={animal.SponsorName ? true : false}
+                        />
+                        <FosterAdoptSponsorForm
+                            title="Foster"
+                            name={animal.Name}
+                            buttonDisabled={animal.SponsorName ? true : false}
+                        />
+                    </CardActions>
+                </Card>
+                )
+            })}
+        </div>
     );
 }

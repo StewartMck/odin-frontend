@@ -11,6 +11,9 @@ body {
 
 .Cards{
     display: flex;
+    justify-content: center;
     margin-top: 2em;
-    
+    /* position: absolute; */
+    /* top: 50%; */
+    /* transform: translate(0, -50%); */
 }

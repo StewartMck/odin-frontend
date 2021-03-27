@@ -3,6 +3,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem'
+import {Link} from 'react-router-dom';
 
 export default function NavMenu() {
 
@@ -29,8 +30,15 @@ export default function NavMenu() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>About</MenuItem>
-                <MenuItem onClick={handleClose}>News</MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <Link to='/'>Featured</Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <Link to='/about'>About</Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                <Link to='/news'>News</Link>
+                </MenuItem>
             </Menu>
         </div>
     );

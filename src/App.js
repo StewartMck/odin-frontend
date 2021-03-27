@@ -1,15 +1,25 @@
+import React, {Component} from 'react';
+import {Route, Switch} from 'react-router-dom';
+ 
 import './App.css'
-import FeaturedCard from './Components/Card/FeaturedCard.js';
+import FeaturedCard from './Components/Card/FeaturedCard';
 import AppBar from './Components/AppBar/AppBar';
+import About from './Components/About/About';
+import News from './Components/News/News';
 
 function App() {
   return (
     <div className="App">
       <AppBar/>
-      <div className="Cards">
+      <Switch>
+        <Route exact path='/' component={FeaturedCard}/>
+        <Route path='/about' component={About}/>
+        <Route path='/news' component={News}/>
+      </Switch>
+      {/* <div className="Cards">
       <FeaturedCard/>
       <FeaturedCard/>
-      </div>
+      </div> */}
     </div>
   );
 }

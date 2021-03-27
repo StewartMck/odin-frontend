@@ -18,10 +18,6 @@ function App() {
         <Route path='/news' component={News}/>
         <Route path='/admin' component={Admin}/>
       </Switch>
-      {/* <div className="Cards">
-      <FeaturedCard/>
-      <FeaturedCard/>
-      </div> */}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import FeaturedCard from './Components/Card/FeaturedCard';
 import AppBar from './Components/AppBar/AppBar';
 import About from './Components/About/About';
 import News from './Components/News/News';
+import Admin from './Components/Admin/Index';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/' component={FeaturedCard}/>
         <Route path='/about' component={About}/>
         <Route path='/news' component={News}/>
+        <Route path='/admin' component={Admin}/>
       </Switch>
       {/* <div className="Cards">
       <FeaturedCard/>

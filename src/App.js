@@ -6,9 +6,10 @@ function App() {
   return (
     <div className="App">
       <AppBar/>
+      <div className="Cards">
       <FeaturedCard/>
       <FeaturedCard/>
-      <FeaturedCard/>
+      </div>
     </div>
   );
 }

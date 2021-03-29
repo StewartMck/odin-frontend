@@ -5,3 +5,11 @@
 .MuiToolbar-root{
     justify-content: space-between;
 }
+
+.counter-adopt {
+    display:flex;
+}
+
+.counter-adopt img {
+    width: 3em;
+}

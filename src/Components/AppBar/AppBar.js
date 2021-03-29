@@ -15,8 +15,12 @@ export default function AppBar() {
                 <Toolbar className='toolbar'>
                    <NavMenu/>
                     <h3>ODIN</h3>
+                    <div className="counter-adopt">
                     <AnimalCounter/>
-                    <Button color='inherit'>Login</Button>
+                    <Button color='inherit'>
+                    <img src='https://exoffender.org/wp-content/uploads/2017/09/donate-icon.png'/>
+                        </Button>
+                    </div>
                 </Toolbar>
             </Appbar>
         </div>

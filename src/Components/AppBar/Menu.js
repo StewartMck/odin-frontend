@@ -39,6 +39,9 @@ export default function NavMenu() {
                 <MenuItem onClick={handleClose}>
                 <Link to='/news'>News</Link>
                 </MenuItem>
+                <MenuItem onClick={handleClose}>
+                <Link to='/'>Login</Link>
+                </MenuItem>
             </Menu>
         </div>
     );
